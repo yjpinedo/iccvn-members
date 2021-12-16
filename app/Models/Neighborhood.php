@@ -5,12 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Sector extends Model
+class Neighborhood extends Model
 {
     use HasFactory;
 
-    public function neighborhoods()
+    public function sector()
     {
-        return $this->hasMany(Neighborhood::class);
+        return $this->belongsTo(Sector::class);
     }
 }
