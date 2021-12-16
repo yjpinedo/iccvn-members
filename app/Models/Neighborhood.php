@@ -13,4 +13,9 @@ class Neighborhood extends Model
     {
         return $this->belongsTo(Sector::class);
     }
+
+    public function members()
+    {
+        return $this->hasMany(Member::class);
+    }
 }
