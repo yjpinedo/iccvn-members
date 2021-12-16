@@ -13,4 +13,9 @@ class Member extends Model
     {
         return $this->belongsTo(Neighborhood::class);
     }
+
+    public function cell()
+    {
+        return $this->belongsTo(Cell::class);
+    }
 }
