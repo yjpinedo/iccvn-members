@@ -18,4 +18,9 @@ class Member extends Model
     {
         return $this->belongsTo(Cell::class);
     }
+
+    public function meetings()
+    {
+        return $this->belongsToMany(Meeting::class);
+    }
 }
