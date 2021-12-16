@@ -27,7 +27,7 @@ class CreateMembersTable extends Migration
             $table->timestamp('date_of_birth');
             $table->enum('civil_status', ['Soltero', 'Casado', 'Unión libre', 'Separado', 'Divorciado', 'Viudo']);
             $table->foreignId('neighborhood_id')->constrained();
-            $table->foreignId('cell_id')->nullable()->constrained();
+            $table->foreignId('cell_id')->nullable()->constrained()->onDelete('set null');
             $table->timestamps();
         });
     }

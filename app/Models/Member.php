@@ -23,4 +23,9 @@ class Member extends Model
     {
         return $this->belongsToMany(Meeting::class);
     }
+
+    public function schools()
+    {
+        return $this->belongsToMany(School::class);
+    }
 }
