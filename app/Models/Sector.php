@@ -13,4 +13,9 @@ class Sector extends Model
     {
         return $this->hasMany(Neighborhood::class);
     }
+
+    public function cells()
+    {
+        return $this->hasMany(Cell::class);
+    }
 }
