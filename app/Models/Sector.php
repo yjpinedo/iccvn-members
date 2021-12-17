@@ -9,6 +9,8 @@ class Sector extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['name', 'description'];
+
     public function neighborhoods()
     {
         return $this->hasMany(Neighborhood::class);

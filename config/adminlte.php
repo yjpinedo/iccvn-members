@@ -146,7 +146,7 @@ return [
     */
 
     'sidebar_mini' => 'lg',
-    'sidebar_collapse' => true,
+    'sidebar_collapse' => false,
     'sidebar_collapse_auto_size' => false,
     'sidebar_collapse_remember' => false,
     'sidebar_collapse_remember_no_transition' => true,
@@ -247,11 +247,9 @@ return [
             'can'  => 'manage-blog',
         ],
         [
-            'text'        => 'pages',
-            'url'         => 'admin/pages',
+            'text'        => 'Sectors',
+            'route'         => 'sectors.index',
             'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
         ],
         ['header' => 'account_settings'],
         [
