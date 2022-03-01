@@ -12,17 +12,24 @@
             <div class="col-md-12">
                 <x-adminlte-card theme="secondary" theme-mode="outline">
                     <div class="d-flex justify-content-between align-items-center">
-                        <h2>Lista de sectores</h2>
-                        <x-adminlte-button class="bg-gradient-success float-right" type="submit" theme="success"
-                            icon="fas fa-plus" label="Nuevo" />
+                        <h2>Sectors
+                        </h2>
+                        <x-adminlte-button class="bg-gradient-lightblue" type="submit" theme="success" icon="fas fa-plus"
+                            label="Nuevo" data-toggle="modal" data-target="#create-sector" />
+                        <x-adminlte-modal id="create-sector" title="Create Sector" theme="lightblue" icon="fas fa-bolt">
+                            This is a lightblue theme modal without animations.
+                        </x-adminlte-modal>
                     </div>
-                    <x-adminlte-input name="search" placeholder="search">
-                        <x-slot name="appendSlot">
-                            <div class="input-group-text bg-white">
-                                <i class="fas fa-search"></i>
-                            </div>
-                        </x-slot>
-                    </x-adminlte-input>
+                    <br>
+                    <x-adminlte-card theme="lightblue" theme-mode="full">
+                        <x-adminlte-input name="search" placeholder="search" class="mb-0">
+                            <x-slot name="appendSlot">
+                                <div class="input-group-text bg-white">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                            </x-slot>
+                        </x-adminlte-input>
+                    </x-adminlte-card>
                     <div class="card-deck">
                         @forelse ($sectors as $sector)
                             <div class="card" style="width: 18rem;">
